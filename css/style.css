@@ -1,0 +1,99 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #36485E;
+}
+
+.container{
+	width: 960px;
+	height: 550px;
+	margin: 60px auto;
+	position: relative;
+}
+
+.pic{
+	width: 250px;/*控制照片大小*/
+	/*height: 150px;*/
+}
+
+.container img:hover{/*鼠标事件，动态效果*/
+	box-shadow: 15px 15px 20px rgba(50,50,50,0.4);/*盒子效果  阴影效果*/
+	transform: rotate(0deg) scale(1.5);/*还原倾斜效果    scale()缩放效果*/
+	-webkit-transform: rotate(0deg) scale(1.5);/*处理兼容性问题*/
+	z-index: 2;/*鼠标经过之后index为2*/
+}
+
+.container img{
+	padding: 10px 10px 15px;
+	background-color: white;
+	border: 1px solid #ddd;
+	box-shadow: 2px 2px 3px rgba(50,50,50,0.4);
+	-webkit-transition: all 0.5s ease-in;/*这一排transition都是处理兼容性问题*/
+	-moz-transition: all 0.5s ease-in;
+	-ms-transition: all 0.5s ease-in;
+	-o-transition: all 0.5s ease-in;
+	transition: all 0.5s ease-in;
+	position: absolute;
+	z-index: 1;/*鼠标经过之前index为1*/
+}
+
+.pic1{
+	left: 10px;
+	top: 0;
+	transform: rotate(-5deg);/*倾斜角度*/
+	-webkit-transform: rotate(-5deg);/*处理兼容性问题*/
+}
+.pic2{
+	right: 350px;
+	top: 0;
+	transform: rotate(-15deg);/*倾斜角度*/
+	-webkit-transform: rotate(-15deg);/*处理兼容性问题*/
+}
+
+.pic3{
+	right: 10px;
+	top: 0;
+	transform: rotate(15deg);/*倾斜角度*/
+	-webkit-transform: rotate(15deg);/*处理兼容性问题*/
+}
+
+.pic4{
+	left: 10px;
+	top: 180px;
+	transform: rotate(25deg);/*倾斜角度*/
+	-webkit-transform: rotate(25deg);/*处理兼容性问题*/
+}
+
+.pic5{
+	right: 350px;
+	top: 200px;
+	transform: rotate(-5deg);/*倾斜角度*/
+	-webkit-transform: rotate(-5deg);/*处理兼容性问题*/
+}
+.pic6{
+	right: 10px;
+	bottom: 180px;
+	transform: rotate(5deg);/*倾斜角度*/
+	-webkit-transform: rotate(5deg);/*处理兼容性问题*/
+}
+.pic7{
+	left: 10px;
+	bottom: 0;
+	transform: rotate(-5deg);/*倾斜角度*/
+	-webkit-transform: rotate(-5deg);/*处理兼容性问题*/
+}
+.pic8{
+	right: 350px;
+	bottom: 0;
+	transform: rotate(15deg);/*倾斜角度*/
+	-webkit-transform: rotate(15deg);/*处理兼容性问题*/
+}
+.pic9{
+	right: 10px;
+	bottom: 0;
+	transform: rotate(-15deg);/*倾斜角度*/
+	-webkit-transform: rotate(-15deg);/*处理兼容性问题*/
+}
