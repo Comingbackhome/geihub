@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Math对象</title>
+	</head>
+	<script type="text/javascript">
+		//		ceil() 方法可对一个数进行向上取整。
+	  document.write(Math.ceil(0.8) + "<br />")
+	  document.write(Math.ceil(-5.9)+ "<br>")
+	  
+	  //floor() 方法可对一个数进行向下取整。
+	  document.write(Math.floor(0.8)+ "<br>")
+	  document.write(Math.floor(-5.9)+ "<br>")
+	  
+	  //round() 方法可把一个数字四舍五入为最接近的整数。
+	  document.write(Math.round(1.6)+ "<br>");
+  	  document.write(Math.round(2.4)+ "<br>");
+  	  
+  	  //random() 方法可返回介于 0 ~ 1（大于或等于 0 但小于 1 )之间的一个随机数。
+  	  document.write(Math.random()+ "<br>");
+  	  
+  	  //concat() 方法用于连接两个或多个数组。此方法返回一个新数组，不改变原来的数组。
+  	  var mya = new Array(3);
+	  mya[0] = "1";
+	  mya[1] = "2";
+	  mya[2] = "3";
+	  document.write(mya.concat(4,5)+"<br>");
+	  document.write(mya+"<br>"); 
+	  
+	  //指定分隔符连接数组元素join()
+	  var myarr = new Array(3);
+	  myarr[0] = "I";
+	  myarr[1] = "love";
+	  myarr[2] = "JavaScript";
+	  document.write(myarr.join()+"<br>");
+	  document.write(myarr.join(".")+"<br>");
+	  
+	  //颠倒数组元素顺序reverse()
+	  var myarr = new Array(3)
+	  myarr[0] = "1"
+	  myarr[1] = "2"
+	  myarr[2] = "3"
+	  document.write(myarr + "<br />")
+	  document.write(myarr.reverse()+ "<br />")
+	  
+	  //slice() 方法可从已有的数组中返回选定的元素。如果 end 未被规定，那么 slice() 方法会选取从 start 到数组结尾的所有元素
+	  var myarr = new Array(1,2,3,4,5,6);
+	  document.write(myarr + "<br>");
+	  document.write(myarr.slice(2,4) + "<br>");
+	  document.write(myarr+ "<br>");
+	  
+	  //sort()方法使数组中的元素按照一定的顺序排列。  https://www.imooc.com/code/876
+	</script>
+	<body>
+		https://www.imooc.com/code/850
+		https://www.imooc.com/code/851
+		
+		Array 数组对象 https://www.imooc.com/code/871
+	</body>
+</html>
