@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- import CSS 第一句为导入VUE样式，第二句为导入element样式-->
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+</head>
+<body>
+  	<div id="app">
+	    <input type="text" v-model="n1"/>
+	    
+	    <select v-model="opt">
+	    	<option value="+">+</option>
+	    	<option value="-">-</option>
+	    	<option value="*">*</option>
+	    	<option value="/">/</option>
+	    </select>
+	    
+	    <input type="text" v-model="n2"/>
+	    
+	    <input type="button" value="=" @click="cacl"/>
+	    
+	    <input type="text" v-model="result"/>
+  	</div>
+</body>
+  <!-- import Vue before Element 
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <!-- import JavaScript 
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+	      	n1: 0,
+	      	n2: 0,
+	      	result: 0,
+	      	opt: "+"
+	      },
+        methods: {
+      		cacl() { //  计算机属性方法56
+	  			switch (this.opt) {
+	  				case '+':
+	  					this.result = parseInt(this.n1) + parseInt(this.n2)
+	  					break;
+	  				case '-':
+	  					this.result = parseInt(this.n1) - parseInt(this.n2)
+	  					break;
+	  				
+	  				case '*':
+	  					this.result = parseInt(this.n1) * parseInt(this.n2)
+	  					break;
+	  				case '/':
+	  					this.result = parseInt(this.n1) / parseInt(this.n2)
+	  					break;	
+  				}		
+      		}
+     	}
+    });
+</script>
+</html>
