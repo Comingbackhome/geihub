@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>简单的VUE例子</title>
+	</head>
+	<script src="https://cdn.bootcss.com/vue/2.6.9/vue.min.js"></script>
+	<style>
+		#app{
+			color: red;
+		}
+	</style>
+	<body>
+		<div id="app">
+			<div>
+				msg
+			</div>
+			<div>
+				{{ msg }}
+			</div>		
+			<a :href="baidu">百度</a>
+			<input type="button" v-on:click="submit()" value="点击"/>
+			<div>
+				{{ count }}
+			</div>
+		</div>
+	</body>
+	<script>
+		new Vue({
+			el: "#app",
+			data: {
+				msg: 'hello word!',
+				count: 1,
+				baidu: 'http://www.baidu.com'
+			},
+			methods: {
+				submit : function(){
+					this.count ++
+				}
+			}
+		})
+	</script>
+</html>

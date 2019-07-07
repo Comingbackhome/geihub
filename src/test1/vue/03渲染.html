@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>02侦听</title>
+	</head>
+	<script src="https://cdn.bootcss.com/vue/2.6.9/vue.min.js"></script>
+	<body>
+		<div id="app">
+			<div v-if="count > 0">
+				判断1：count的值大于0
+			</div>
+			<div v-else-if="count == 0">
+				判断2：count的值等于0
+			</div>
+			<div v-else>
+				判断:3count的值是{{ count }}
+			</div>
+			<div v-show="count">
+				判断4:v-show
+			</div>
+			<!--列表渲染-->
+			<div v-for="item in list">
+				<!--{{ item.name }}-->
+				<div v-if="item.age >13">
+					{{ item.name }}
+				</div>
+				<div v-else>
+					{{ item.age }}
+				</div>
+				
+				<div v-show="item.age <13">
+					v-show的{{item.name}}
+				</div>
+			</div>			
+			<div :style="stymsg">
+				<p>style 测试</p>
+			</div>
+		</div>
+	</body>
+	<script>
+		var app = new Vue({
+			el: "#app",
+			data: {
+				count: 1,
+				list: [{name: 'xiaowang', age: 12}, {name: 'xiaozhang', age: 15}],
+				stymsg: {color: 'red', textShadow: '0 0 5px green'}
+			},
+			methods: {
+				
+			},
+			watch: {
+
+			},
+			computed: {
+
+			}
+		})
+	</script>
+</html>
